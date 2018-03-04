@@ -1,0 +1,19 @@
+{
+  "include": [
+    "./**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "sourceRoot": ".",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./typings"
+    ]
+  }
+}
