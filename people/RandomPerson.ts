@@ -1,5 +1,6 @@
 import { Person } from "../base/Person";
 import { Place } from "../base/Place";
+import { TransportationMethod } from "../base/TransportationMethod";
 
 export class RandomPerson extends Person {
 
@@ -15,35 +16,9 @@ export class RandomPerson extends Person {
         this.name = randomPeopleNames[Math.floor(Math.random() * randomPeopleNames.length)];
     }
 
-    canWalk(): boolean {
-        return true;
-    }
-
-    walk() {
-
-    }
-
-    wakeUp() {
-    }
-
-    cry() {
-    }
-
-    smile() {
-    }
-
-    turnSad() {
-    }
-
-    goTo(place: Place) {
+    goTo(place: Place, transportationMethod: TransportationMethod): void {
     }
 
     goToWork() {
-    }
-
-    sleep(numberOfHours: number) {
-    }
-
-    work() {
     }
 }

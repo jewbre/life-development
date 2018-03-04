@@ -1,15 +1,16 @@
 import { Place } from "./Place";
+import { TransportationMethod } from "./TransportationMethod";
 
 export abstract class Person {
     name: string;
 
     think(thought: string) {
         console.log(`
-${name} is thinking: ${thought}
+${this.name} is thinking: ${thought}
         `);
     }
 
-    abstract goTo(place: Place): void;
+    abstract goTo(place: Place, transportationMethod: TransportationMethod): void;
 
     abstract goToWork(): void;
 }
