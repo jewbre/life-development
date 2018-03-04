@@ -5,6 +5,8 @@ export class Life {
     private static instance: Life = null;
     private people: Person[] = [];
 
+    private time: number = -1;
+
     private constructor() {
 
     }
@@ -34,7 +36,10 @@ export class Life {
     }
 
     public getTime() {
-        return Math.floor(Math.random() * 24);
+        if (this.time < 0) {
+            this.time = Math.floor(Math.random() * 24)
+        }
+        return this.time;
     }
 
     public getYear() {
